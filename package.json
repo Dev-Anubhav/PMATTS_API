@@ -2,13 +2,13 @@
   "name": "y",
   "version": "1.0.0",
   "main": "index.js",
-    "engines": {
-      "node": "22.x"
-    },
- "scripts": {
-  "dev": "nodemon index.js",
-  "start": "node index.js"
-},
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
   "author": "",
   "license": "ISC",
   "description": "",
