@@ -5,9 +5,10 @@
     "engines": {
       "node": "22.x"
     },
-  "scripts": {
-    "dev": "nodemon index.js"
-  },
+ "scripts": {
+  "dev": "nodemon index.js",
+  "start": "node index.js"
+},
   "author": "",
   "license": "ISC",
   "description": "",
