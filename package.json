@@ -21,6 +21,8 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "payu-websdk": "^1.2.0",
+    "resend": "^4.1.2",
+    "sib-api-v3-sdk": "^8.5.0",
     "uuid": "^11.0.5"
   },
   "devDependencies": {

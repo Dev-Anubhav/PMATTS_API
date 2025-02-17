@@ -8,11 +8,18 @@ exports.verifyPayment = async (req, res) => {
 
     
         const verifiedData = await PayData.payuCLient.verifyPayment(txnid);
-        const data = verifiedData.transaction_details[txnid];
-
-        if (!data) {
-            return res.status(400).json({ msg: "Invalid transaction ID" });
+        console.log("Verified Data:", verifiedData);
+        
+        if (!verifiedData.transaction_details) {
+            return res.status(500).json({ msg: "Missing transaction details from PayU", response: verifiedData });
         }
+        
+        const data = verifiedData.transaction_details[txnid];
+        
+        if (!data) {
+            return res.status(400).json({ msg: "Transaction ID not found in PayU response", txnid, response: verifiedData });
+        }
+        
 
       
         const paymentStatus =
