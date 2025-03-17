@@ -15,7 +15,7 @@ const acknowledgeEmail = async (req, res) => {
 
   <p>I hope this email finds you well.</p>
 
-  <p>We are pleased to acknowledge the receipt of your investment of <strong>${investedAmount}</strong> in <strong>${projectName}</strong>. We sincerely appreciate your trust and confidence in our vision and commitment to growth.</p>
+  <p>We are pleased to acknowledge the receipt of your investment of <strong>₹ ${investedAmount}</strong> in <strong>${projectName}</strong>. We sincerely appreciate your trust and confidence in our vision and commitment to growth.</p>
 
   <p>Thank you for your support and belief in Pmatts. We look forward to a successful partnership.</p>
 
@@ -23,7 +23,6 @@ const acknowledgeEmail = async (req, res) => {
   The Pmatts Team</p>
   `;
 
-  
     let defaultClient = SibApiV3Sdk.ApiClient.instance;
     let apiKey = defaultClient.authentications["api-key"];
     apiKey.apiKey = process.env.BREVO_API_KEY;
